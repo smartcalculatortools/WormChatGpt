@@ -8,13 +8,22 @@ FastAPI application entry point.
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from loguru import logger
 import time
+import sys
 
 from .core.config import settings
-from .core.logging import log
-from .db.session import init_db
 from .api.routes import chat, conversations, users, settings as settings_router
+
+# Setup basic logging
+log = sys.modules.get('logging')
+if log:
+    log = log.getLogger(__name__)
+else:
+    class SimpleLog:
+        def info(self, msg): print(f"INFO: {msg}")
+        def warning(self, msg): print(f"WARNING: {msg}")
+        def error(self, msg): print(f"ERROR: {msg}")
+    log = SimpleLog()
 
 # Create FastAPI application
 app = FastAPI(

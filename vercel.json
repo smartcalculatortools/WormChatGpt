@@ -13,6 +13,7 @@
     }
   ],
   "env": {
-    "DEBUG": "True"
+    "DEBUG": "True",
+    "PYTHON_VERSION": "3.12"
   }
 }
