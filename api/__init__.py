@@ -1,7 +1,8 @@
 # Vercel Serverless Handler for FastAPI
 # This file allows FastAPI to run on Vercel's serverless functions
 
-from app.main import app as application
+# Import from root main.py
+from main import app as application
 import os
 
 # Expose the ASGI app for Vercel
