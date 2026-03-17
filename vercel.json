@@ -2,8 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/requirements.txt",
-      "use": "@vercel/python"
+      "src": "backend/app/main.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.12"
+      }
     }
   ],
   "routes": [

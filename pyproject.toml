@@ -5,3 +5,13 @@ reportGeneralTypeIssues = false
 [tool.pyright]
 # Ignore false positives from docstrings
 reportGeneralTypeIssues = false
+
+# Vercel Python configuration
+[project]
+name = "the-architect-2099"
+version = "1.0.0"
+requires-python = ">=3.12"
+
+[tool.vercel]
+build_command = "pip install -r backend/requirements.txt"
+dev_command = "uvicorn backend.app.main:app --reload"
