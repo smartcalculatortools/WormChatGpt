@@ -1,15 +1,13 @@
-# Vercel Serverless Function Handler for FastAPI
-# This file is the entry point for Vercel serverless functions
+"""
+The Architect 2099 - Vercel Serverless Entry Point
+المطور: Loard Zoala
 
-import sys
-import os
+This file serves as the entry point for Vercel serverless deployment.
+It imports and exposes the FastAPI application.
+"""
 
-# Add the backend directory to the path so we can import app
-backend_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'backend')
-sys.path.insert(0, backend_path)
+# Import the FastAPI app from backend
+from backend.app.main import app
 
-# Import the FastAPI app
-from app.main import app
-
-# Export the app for Vercel (must be named 'app' or 'handler')
+# Vercel expects the app to be exposed as 'app' or 'application'
 application = app
