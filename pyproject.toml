@@ -1,0 +1,7 @@
+[tool.pylance]
+# Ignore docstring parsing errors
+reportGeneralTypeIssues = false
+
+[tool.pyright]
+# Ignore false positives from docstrings
+reportGeneralTypeIssues = false
