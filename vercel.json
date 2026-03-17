@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/app/main.py",
+      "src": "backend/requirements.txt",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "backend/app/main.py"
+      "dest": "backend/app/main.py:app"
     }
   ],
   "env": {
@@ -20,6 +20,5 @@
     "APP_NAME": "The Architect 2099",
     "APP_VERSION": "1.0.0",
     "DEEP_DIVE_ENABLED": "true"
-  },
-  "outputDirectory": "/vercel/output"
+  }
 }
