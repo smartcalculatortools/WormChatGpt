@@ -14,6 +14,12 @@
   ],
   "env": {
     "DEBUG": "True",
-    "PYTHON_VERSION": "3.12"
-  }
+    "PYTHON_VERSION": "3.12",
+    "SECRET_KEY": "architect-secret-key-for-vercel-deployment",
+    "DEVELOPER": "Loard Zoala",
+    "APP_NAME": "The Architect 2099",
+    "APP_VERSION": "1.0.0",
+    "DEEP_DIVE_ENABLED": "true"
+  },
+  "outputDirectory": "/vercel/output"
 }
