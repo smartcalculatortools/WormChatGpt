@@ -1,15 +1,11 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "main.py",
-      "use": "@vercel/python"
+  "buildCommand": null,
+  "devCommand": null,
+  "installCommand": "pip install -r requirements.txt",
+  "outputDirectory": "",
+  "functions": {
+    "main.py": {
+      "runtime": "@vercel/python"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "main.py"
-    }
-  ]
+  }
 }
